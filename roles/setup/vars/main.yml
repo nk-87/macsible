@@ -1,0 +1,87 @@
+---
+
+brew_gnu_utils:
+  - coreutils
+  - findutils
+  - grep
+  - gawk
+  - gnu-sed
+  - gnu-tar
+  - make
+
+brew_cli:
+  - awscli
+  - bat
+  - bzip2
+  - curl
+  - docker-ls
+  - eksctl
+  - exa
+  - fd
+  - fzf
+  - git
+  - go
+  - golangci-lint
+  - gopls
+  - go-task
+  - helm
+  - imagemagick
+  - jq
+  - krew
+  - kubectl
+  - kubectx
+  - kustomize
+  - lima
+  - lsd
+  - minikube
+  - mosh
+  - neofetch
+  - neovim
+  - node
+  - podman
+  - python
+  - pwgen
+  - ripgrep
+  - sheldon
+  - slides
+  - starship
+  - telnet
+  - terraform
+  - terraform-docs
+  - terraform-ls
+  - tree-sitter
+  - tmux
+  - typescript
+  - vim
+  - wget
+  - wireguard-tools
+  - yarn
+  - zip
+
+brew_cask:
+  - airbuddy
+  - alfred
+  - appcleaner
+  - calibre
+  - discord
+  - docker
+  - dropbox
+  - finicky
+  - firefox
+  - firefox-developer-edition
+  - font-jetbrains-mono
+  - iterm2
+  - karabiner-elements
+  - knockknock
+  - lulu
+  - oversight
+  - raindropio
+  - rectangle
+  - signal
+  - slack
+  - vivaldi
+  - vlc
+  - zoom
+
+dotrepo: "https://gitlab.com/namho/dotfiles"
+dotdir: "{{ ansible_user_dir }}/dotfiles"

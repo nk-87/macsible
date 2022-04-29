@@ -1,0 +1,27 @@
+---
+- name: Set git config user.name
+  git_config:
+    name: user.name
+    scope: global
+    value: Namho Kim
+
+- name: Set git config user.email
+  git_config:
+    name: user.email
+    scope: global
+    value: git@namho.kim
+
+- name: Change dotfile repo's remote url to ssh
+  git_config:
+    name: remote.origin.url
+    scope: local
+    repo: "{{ dotdir }}"
+    value: git@github.com:nk-87/dotfiles
+
+- name: Change this playbook repo's remote url to ssh
+  git_config:
+    name: remote.origin.url
+    scope: local
+    repo: "{{ playbook_dir }}"
+    value: git@github.com:nk-87/macsible
+

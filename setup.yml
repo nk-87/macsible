@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  # ignore_errors: yes
+  roles:
+    - setup 

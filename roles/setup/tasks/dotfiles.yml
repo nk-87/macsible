@@ -1,0 +1,43 @@
+---
+
+- name: Download dotfiles
+  git:
+    repo: "{{ dotrepo }}"
+    dest: "{{ dotdir }}"
+  ignore_errors: "{{ ansible_check_mode }}"
+
+- name: Link zsh config
+  file:
+    src: "{{ dotdir }}/zsh/zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    state: link
+
+- name: Link Neovim init file
+  file:
+    src: "{{ dotdir }}/nvim"
+    dest: "{{ ansible_user_dir }}/.config/nvim"
+    state: link
+
+- name: Link .tmux.conf
+  file:
+    src: "{{ dotdir }}/tmux/tmux.conf"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
+    state: link
+
+- name: Link iTerm2 conf
+  file:
+    src: "{{ dotdir }}/iterm/dracula.json"
+    dest: "{{ ansible_user_dir }}/Library/Application\ Support/iTerm2/DynamicProfiles/dracula.json"
+    state: link
+
+- name: Link Starship conf
+  file:
+    src: "{{ dotdir }}/starship/starship.toml"
+    dest: "{{ ansible_user_dir }}/.config/starship.toml"
+    state: link
+
+- name: Link Sheldon conf
+  file:
+    src: "{{ dotdir }}/zsh/sheldon"
+    dest: "{{ ansible_user_dir }}/.config/sheldon"
+    state: link

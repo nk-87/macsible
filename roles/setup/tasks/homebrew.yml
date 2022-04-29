@@ -1,0 +1,39 @@
+---
+
+- name: Add Homebrew fonts tap
+  homebrew_tap:
+    name: homebrew/cask-fonts
+    state: present
+
+- name: Add Homebrew versions tap
+  homebrew_tap:
+    name: homebrew/cask-versions
+    state: present
+
+- name: Add HashiCorp tap
+  homebrew_tap:
+    name: hashicorp/tap
+    state: present
+
+- name: Add go-task tap
+  homebrew_tap:
+    name: go-task/tap
+    state: present
+
+- name: Install GNU utils from Homebrew
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ brew_gnu_utils }}"
+
+- name: Install Homebrew formulaes 
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ brew_cli }}"
+
+- name: Install Homebrew casks
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ brew_cask }}"

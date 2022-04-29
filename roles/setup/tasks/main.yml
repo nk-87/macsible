@@ -1,0 +1,6 @@
+---
+- include: homebrew.yml
+
+- include: dotfiles.yml
+
+- include: gitconfig.yml
