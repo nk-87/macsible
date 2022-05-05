@@ -62,13 +62,13 @@ brew_cask:
   - airbuddy
   - alfred
   - appcleaner
+  - brave-browser
+  - brave-browser-dev
   - calibre
   - discord
   - docker
   - dropbox
   - finicky
-  - firefox
-  - firefox-developer-edition
   - font-jetbrains-mono
   - iterm2
   - karabiner-elements
